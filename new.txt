@@ -1,0 +1,197 @@
+<a href="login.html" class="logout">
+               &#128073; LOGOUT 
+            </a>
+			
+			
+			<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+	/* Base Reset and Layout */
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            min-height: 100vh;       
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            
+            /* Background Configuration */ 
+            background-image: url('3.jpg'); 
+            background-repe center;  
+            background-attachment:at: no-repeat; 
+            background-size: cover;       
+            background-position: fixed;  
+        }
+		
+		body {
+          background-image: url("3.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        .login-box h2 {
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* Shared Dashboard Containers */
+        .login-container, .home-container, .table-container {
+            background-color: pink;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+        text-align: center;
+        margin: 20px 0 12px 0;
+        }
+
+        /* Avatar image */
+        img.avatar {
+        width: 10%;
+        border-radius: 20%;
+        }
+        .login-container, .home-container {
+            max-width: 300px;
+        }
+
+        .table-container {
+            max-width: 800px;
+        }
+
+        /* Dynamic Visibility Controls */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Form Inputs */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Action Buttons */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;          
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        .btn:active {
+            transform: scale(2.98);
+        }
+
+        .btn-success { background-color: blue; }
+        .btn-success:hover { background-color: red; }
+		
+        .error-message {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+            font-weight: bold;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+			background-color: pink;
+        }
+
+        th, td {
+            border: 1px solid #3498db;
+            padding: 12px;
+            text-align: left;
+			background-color: pink;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        tr:nth-child(even) {
+            background-color: #C88FFA;
+        }
+    </style>
+ <div class="login-container">
+		<form action="Home.html" method="
+    <div class="login-container">
+	<div class="login-box">
+        <!-- Logo added here. Replace 'logo.png' with your actual image path -->
+        <img src="logo.jpg" alt="Logo" class="login-logo" onerror="this.src=https://www.facebook.com/paulmotorparts/
+        <form id="loginForm" class="login-form">
+          
+<div id="loginSection" class="login-container">
+		<h2><big>Login Form</big></h2>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        <button class="btn btn-success" onclick="validateLogin()">Login</button>
+        <div id="errorMsg" class="error-message">Invalid username or password!</div>
+    </div>
+	</center>
+	 <script>
+        // Form Validation & Initial Login
+        function validateLogin() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var error = document.getElementById("errorMsg");
+            
+            if (user === "cheery" && pass === "miranda") {
+                error.style.display = "none";
+                navigateTo('homepage');
+                
+                // Optional: Clear form inputs on success
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            } else {
+                error.style.display = "block";
+            }
+        }
+		
+ </script>
+
+</body>
+</html>
