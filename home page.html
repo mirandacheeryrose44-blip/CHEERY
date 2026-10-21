@@ -25,119 +25,188 @@
             );
             background-size: 400% 400%;
             animation: backgroundMove 10s ease infinite;
+            padding: 15px;
         }
 
         @keyframes backgroundMove {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
 
-        .container {
-            width: 80%;
+        /* NAVIGATION */
+        .navbar {
+            width: 100%;
             max-width: 1000px;
-            margin: 70px auto;
+            margin: 10px auto 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            background: rgba(255, 255, 255, 0.9);
+            color: #555;
+            padding: 11px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: white;
+            color: #143dcc;
+            transform: translateY(-3px);
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
             text-align: center;
         }
 
         .welcome-box {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 35px;
-            border-radius: 10px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 30px 25px;
+            border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
         h1 {
             color: #222;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
 
         .message {
             color: #555;
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.7;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
-        .logout {
-            display: inline-block;
-            background: #143dcc;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-		
+        /* MOBILE SIZE */
+        @media (max-width: 600px) {
 
-        .navbar {
-            margin-top: 45px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            body {
+                padding: 10px;
+            }
+
+            .navbar {
+                margin-top: 5px;
+                margin-bottom: 25px;
+                gap: 7px;
+            }
+
+            .navbar a {
+                padding: 9px 11px;
+                font-size: 12px;
+                border-radius: 7px;
+            }
+
+            .welcome-box {
+                padding: 25px 18px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 22px;
+                margin-bottom: 18px;
+            }
+
+            .message {
+                font-size: 14px;
+                line-height: 1.6;
+            }
         }
 
-        .navbar a {
-            background: rgba(255,255,255,0.9);
-            color: #555;
-            padding: 14px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-        }
+        /* VERY SMALL PHONES */
+        @media (max-width: 390px) {
 
-        .navbar a:hover {
-            background: #ffffff;
-            color: #143dcc;
-            transform: translateY(-3px);
-        }
+            .navbar {
+                gap: 5px;
+            }
 
-        .icon {
-            margin-right: 7px;
+            .navbar a {
+                padding: 8px 9px;
+                font-size: 11px;
+            }
+
+            .welcome-box {
+                padding: 22px 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<div class="navbar">
-            <a href="home page.html">
-                &#127968; Home
-            </a>
-             <a href="Product.html">
-			 👉 Product
-			 </a>
-            <a href="about page.html">
-               &#128100; About
-            </a>
-            <a href="Contact.html">
-                &#128222; Contact
-            </a>
-			<a href="Logout.html">
-			🔐 Logout
-			</a>
-        </div>
+    <!-- NAVIGATION -->
+    <div class="navbar">
 
+        <a href="home.html">
+            🏠 Home
+        </a>
 
+        <a href="Product.html">
+            👉 Product
+        </a>
+
+        <a href="about page.html">
+            👤 About
+        </a>
+
+        <a href="Contact.html">
+            📞 Contact
+        </a>
+
+        <a href="Logout.html">
+            🔐 Logout
+        </a>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
     <div class="container">
 
         <div class="welcome-box">
-            <h1>Welcome to <em>Cheery's Bags!</em></h1>
+
+            <h1>
+                Welcome to <em>Cheery's Bags!</em>
+            </h1>
 
             <p class="message">
-                "Cheery's bags offers simple, stylish, and affordale bags for everyday use. Our bags are designed to be useful, 
-				comfortable, and easy to carry. Find a bag that matches your style and fit your daily needs."
-				<br>
-				<br>
-				<b>Carry it. Love it. Make it yours!</b> &#128092;
+                "Cheery's Bags offers simple, stylish, and affordable
+                bags for everyday use. Our bags are designed to be useful,
+                comfortable, and easy to carry. Find a bag that matches
+                your style and fits your daily needs."
+
+                <br><br>
+
+                <b>Carry it. Love it. Make it yours! 👜</b>
             </p>
 
         </div>
