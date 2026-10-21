@@ -1,60 +1,68 @@
-<DOCTYPE html>
- <html lang="en">
- <head>
- <title>Login form</title>
- <style> 
-  * {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <style>
+        * {
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url("3.jpg");
-            background-size: cover;
-            background-position: center;
+            background-color: #EF8FFA;
+            padding: 20px;
         }
+
         .login-box {
-            width: 350px;
-            padding: 35px;
-            background: rgba(255,255,255,0.15);
+            width: 100%;
+            max-width: 350px;
+            padding: 30px 25px;
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 15px;
             text-align: center;
             color: black;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
-        /* Style for your new logo */
+
         .login-logo {
             width: 80px;
             height: 80px;
-            border-radius: 60%;
-            margin-bottom: 25px;
+            border-radius: 50%;
+            margin-bottom: 20px;
             object-fit: cover;
         }
-        h1 {
-            margin-bottom: 25px;
-            margin-top: 0;
+
+        h2 {
+            margin: 0 0 20px;
             font-size: 24px;
         }
+
         input {
             width: 100%;
             padding: 13px;
-            margin: 10px 0;
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.5);
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.6);
             border-radius: 8px;
             color: black;
             outline: none;
         }
+
         input::placeholder {
             color: black;
         }
+
         button {
             width: 100%;
             padding: 13px;
@@ -68,51 +76,93 @@
             font-weight: bold;
         }
 
+        button:hover {
+            background: #e018c0;
+        }
 
-</style>
-<div class="login-container">
-		<form action="home page.html" method="
-    <div class="login-container">
-	<div class="login-box">
-        <!-- Logo added here. Replace 'logo.png' with your actual image path -->
-        <img src="logo.jpg" alt="Logo" class="login-logo"
-        <form id="loginForm" class="login-form">
-          
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
 
-            <div id="loginSection" class="login-container">
-		<h2><big>Login Form</big></h2>
-        <div class="input-group">
-            <input type="text" id="username" placeholder="Enter username">
-        </div>
-        <div class="input-group">
-            <input type="password" id="password" placeholder="Enter password">
-        </div>
-        <button class="btn btn-success" onclick="validateLogin()">Login</button>
-        <div id="errorMsg" class="error-message"></div>
+        /* Extra adjustment for small phones */
+        @media (max-width: 400px) {
+            .login-box {
+                max-width: 320px;
+                padding: 25px 20px;
+            }
+
+            .login-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <img src="logo.jpg" alt="Logo" class="login-logo">
+
+        <h2>Login Form</h2>
+
+        <form id="loginForm">
+
+            <input 
+                type="text" 
+                id="username" 
+                placeholder="Enter username"
+                required
+            >
+
+            <input 
+                type="password" 
+                id="password" 
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+            <div id="errorMsg" class="error-message">
+                Incorrect username or password.
+            </div>
+
+        </form>
+
     </div>
-	
-	 <script>
-        // Form Validation & Initial Login
-        function validateLogin() {
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
             var user = document.getElementById("username").value;
             var pass = document.getElementById("password").value;
             var error = document.getElementById("errorMsg");
-            
+
             if (user === "cheery" && pass === "miranda") {
+
                 error.style.display = "none";
-                navigateTo('homepage');
-                
-                // Optional: Clear form inputs on success
-                document.getElementById("username").value = "";
-                document.getElementById("password").value = "";
+
+                // Go to homepage
+                window.location.href = "home.html";
+
             } else {
+
                 error.style.display = "block";
+
             }
-        }
-		
- </script>
- 
+        });
+    </script>
+
 </body>
 </html>
-
-     
