@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aboutpage</title>
+    <title>About Page</title>
+
     <style>
         * {
             margin: 0;
@@ -22,27 +23,30 @@
         header {
             background: linear-gradient(90deg, #ECBEF9, #F9BEF7);
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 15px;
         }
 
         header h1 {
-            font-size: 38px;
+            font-size: 36px;
         }
 
         nav {
             background: #F363F8;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            padding: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 10px 15px;
             border-radius: 8px;
             transition: 0.3s;
+            font-size: 15px;
         }
 
         nav a:hover {
@@ -51,10 +55,11 @@
         }
 
         .container {
+            width: 90%;
             max-width: 850px;
-            margin: 60px auto;
-            padding: 40px;
-            background: rgba(255,255,255,0.1);
+            margin: 40px auto;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.45);
             border-radius: 15px;
             text-align: center;
         }
@@ -66,9 +71,74 @@
         }
 
         .container p {
-            line-height: 1.8;
+            line-height: 1.7;
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design for Cellphone */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 25px 10px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                padding: 10px 5px;
+                gap: 5px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+
+            .container {
+                width: 92%;
+                margin: 25px auto;
+                padding: 25px 18px;
+            }
+
+            .container h2 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .container p {
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Very Small Phones */
+        @media (max-width: 400px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 7px 8px;
+            }
+
+            .container {
+                width: 94%;
+                padding: 20px 15px;
+            }
+
+            .container h2 {
+                font-size: 21px;
+            }
+
+            .container p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -76,26 +146,42 @@
 <body>
 
     <header>
-       <h1>CHEERY'S BAG</h1>
-		
+        <h1>CHEERY'S BAG</h1>
     </header>
 
     <nav>
         <a href="home page.html">🏠 Home</a>
-		<a href="Product.html">👉 Product</a>
+        <a href="Product.html">👉 Product</a>
         <a href="about page.html">👤 About</a>
         <a href="Contact.html">📞 Contact</a>
-		<a href="login form.html">🔐Logout</a>
+        <a href="login form.html">🔐 Logout</a>
     </nav>
 
     <div class="container">
 
         <h2>About Cheery's Bags</h2>
-		<p>Cheery's Bags shop is a small online shop that offers stylish, affordable, and useful bags</p> 
-		<p>for students and everyday use. We provide different types of bags such as tote bags,</p> 
-		<p>backpacks, shoulder bags, and handbags. Our goal is to offer quality bags that are </p> 
-		<p>comfortable, fashionable, and suitable for everyone's daily needs. </p> 
-                         <p> Tour Cheery's Bag Shop! </p>
+
+        <p>
+            Cheery's Bags Shop is a small online shop that offers
+            stylish, affordable, and useful bags for students and
+            everyday use.
+        </p>
+
+        <p>
+            We provide different types of bags such as tote bags,
+            backpacks, shoulder bags, and handbags.
+        </p>
+
+        <p>
+            Our goal is to offer quality bags that are comfortable,
+            fashionable, and suitable for everyone's daily needs.
+        </p>
+
+        <p>
+            <strong>Tour Cheery's Bag Shop! 👜💗</strong>
+        </p>
+
     </div>
+
 </body>
 </html>
