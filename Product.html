@@ -4,47 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PRODUCTS</title>
-     <style>
-		   body {
-  
-            font-family: Arial, sans-serif;
-            background-color: #8FEBFA;
+    <title>Products</title>
+
+    <style>
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
+        body {
+            background-color: #8FEBFA;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
         header {
             background: linear-gradient(90deg, #ECBEF9, #F9BEF7);
             color: black;
             text-align: center;
-            padding: 15px;
+            padding: 25px 15px;
         }
 
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 3px 0;
+        }
+
+        /* NAVIGATION */
         nav {
             background-color: #F363F8;
-            text-align: center;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 20px;
+            padding: 10px 13px;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            background-color: #9146d8;
+        }
+
+        /* PRODUCTS */
         .products {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 20px;
-            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px 15px;
+            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .product {
             background-color: white;
-            width: 120px;
-            padding: 15px;
+            width: 100%;
+            padding: 12px;
             text-align: center;
             border: 2px solid #8163F8;
             border-radius: 15px;
@@ -52,193 +86,318 @@
         }
 
         .product img {
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            height: 180px;
             object-fit: cover;
             border-radius: 10px;
         }
 
         .product h2 {
             color: #ff1493;
+            font-size: 17px;
+            margin: 10px 0;
+            line-height: 1.3;
         }
 
         .price {
             color: #d63384;
             font-size: 15px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         button {
             background-color: #433DF0;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 9px 14px;
             border-radius: 20px;
             cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
         }
 
         button:hover {
             background-color: #C90BF4;
         }
-		</style>
+
+        /* TABLET */
+        @media (max-width: 800px) {
+
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 20px 12px;
+            }
+
+            .product img {
+                height: 150px;
+            }
+
+            .product h2 {
+                font-size: 15px;
+            }
+        }
+
+        /* CELLPHONE - TWO PRODUCTS PER ROW */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 20px 10px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            header p {
+                font-size: 12px;
+            }
+
+            nav {
+                gap: 5px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                padding: 8px 9px;
+                font-size: 11px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .product {
+                padding: 8px;
+                border-radius: 12px;
+            }
+
+            .product img {
+                width: 100%;
+                height: 130px;
+            }
+
+            .product h2 {
+                font-size: 13px;
+                min-height: 34px;
+                margin: 8px 2px;
+            }
+
+            .price {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+
+            button {
+                width: 100%;
+                padding: 8px 5px;
+                font-size: 11px;
+            }
+        }
+
+        /* VERY SMALL PHONES */
+        @media (max-width: 380px) {
+
+            .products {
+                gap: 8px;
+                padding: 12px 7px;
+            }
+
+            .product {
+                padding: 6px;
+            }
+
+            .product img {
+                height: 115px;
+            }
+
+            .product h2 {
+                font-size: 12px;
+            }
+
+            .price {
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
     <h1>BAG'S SHOP</h1>
-    <p>WECOME TO OUR CHEERY'S BAG SHOP!</P>
-	<P>Discover our beautiful bags is a small retail business that sells</P>
-	<P>fashionable and affordable bags.Its main goal is to provide good quality products at</P>
-	<P>a student-friendly price while giving excellent customer service.</p>
+
+    <p><b>WELCOME TO OUR CHEERY'S BAG SHOP!</b></p>
+
+    <p>
+        Discover our beautiful bags. This is a small retail business
+        that sells fashionable and affordable bags.
+    </p>
+
+    <p>
+        Our main goal is to provide good quality products at a
+        student-friendly price while giving excellent customer service.
+    </p>
 </header>
+
 <nav>
-        <a href="home page.html">🏠 Home</a>
-		<a href="Product.html">👉 Product</a>
-        <a href="about page.html">👤 About</a>
-        <a href="Contact.html">📞 Contact</a>
-		<a href="Activity 1 semi.html">🔐 Logout</a>
-    </nav>
+    <a href="home page.html">🏠 Home</a>
+    <a href="Product.html">👉 Product</a>
+    <a href="about page.html">👤 About</a>
+    <a href="Contact.html">📞 Contact</a>
+    <a href="Activity 1 semi.html">🔐 Logout</a>
+</nav>
 
- <div class="products">
+<div class="products">
 
-        
-        <div class="product">
-            <img src="5_.jpg" alt="BAG">
-            <h2>BEIGE CASUAL BAG</h2>
-            <p class="price">$15.20</p>
-            <button>Add to Cart</button>
-        </div>
-
-        
-        <div class="product">
-            <img src="4.jpg" alt="BAG">
-            <h2>BEIGE MINI BAG</h2>
-            <p class="price">$12.55</p>
-            <button>Add to Cart</button>
-        </div>
-
-        
-        <div class="product">
-            <img src="6.jpg" alt="BAG">
-            <h2>BLACK FLORAL RING-HANDLE BAG</h2>
-            <p class="price">$20.12</p>
-            <button>Add to Cart</button>
-        </div>
-
-        
-        <div class="product">
-            <img src="7.jpg" alt="BAG">
-            <h2>WOVEN WRISTLET CLUTCH BAG</h2>
-            <p class="price">$55.20</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="9.jpg" alt="BAG">
-            <h2>Shoulder Bag Cross-Body Bag</h2>
-            <p class="price">$50.00</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="10.jpg" alt="BAG">
-            <h2>Girls Pink School Backpack</h2>
-            <p class="price">$10.00</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="11.jpg" alt="BAG">
-            <h2>Mermaid Hand Bag</h2>
-            <p class="price">$67.00</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="12.jpg" alt="BAG">
-            <h2>Women's Crossbody Bag </h2>
-            <p class="price">$80.00</p>
-            <button>Add to Cart</button>
-        </div>
-        
-		<div class="product">
-            <img src="13.jpg" alt="BAG">
-            <h2>Premium Ladies Handbag</h2>
-            <p class="price">$20.00</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="14.jpg" alt="BAG">
-            <h2>Luxury Bag</h2>
-            <p class="price">$6.50</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="15.jpg" alt="BAG">
-            <h2>Teddy Charm Mini Handbag</h2>
-            <p class="price">$8.50</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="16.jpg" alt="BAG">
-            <h2>Bear Tote Bag</h2>
-            <p class="price">$5.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="17.jpg" alt="BAG">
-            <h2>Rock Style Crossbody Bag</h2>
-            <p class="price">$20.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="18.jpg" alt="BAG">
-            <h2>Princess Handbags </h2>
-            <p class="price">$24.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="19.jpg" alt="BAG">
-            <h2>Single-Shoulder Bag</h2>
-            <p class="price">$35.50</p>
-            <button>Add to Cart</button>
-        </div>
-		
-		<div class="product">
-            <img src="20.jpg" alt="BAG">
-            <h2>Korean Style Tote Bag</h2>
-            <p class="price">$38.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="21.jpg" alt="BAG">
-            <h2>Pearl Mini Bag</h2>
-            <p class="price">$45.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="22.jpg" alt="BAG">
-            <h2>Leather Plain Shoulder Bag</h2>
-            <p class="price">$12.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="23.jpg" alt="BAG">
-            <h2>Trendy Crescent Bag</h2>
-            <p class="price">$15.50</p>
-            <button>Add to Cart</button>
-        </div>
-		<div class="product">
-            <img src="24.jpg" alt="BAG">
-            <h2>Shoulder And Crossbody Bag</h2>
-            <p class="price">$25.50</p>
-            <button>Add to Cart</button>
-        </div>
+    <div class="product">
+        <img src="5_.jpg" alt="Beige Casual Bag">
+        <h2>BEIGE CASUAL BAG</h2>
+        <p class="price">$15.20</p>
+        <button>Add to Cart</button>
     </div>
+
+    <div class="product">
+        <img src="4.jpg" alt="Beige Mini Bag">
+        <h2>BEIGE MINI BAG</h2>
+        <p class="price">$12.55</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="6.jpg" alt="Black Floral Ring Handle Bag">
+        <h2>BLACK FLORAL RING-HANDLE BAG</h2>
+        <p class="price">$20.12</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="7.jpg" alt="Woven Wristlet Clutch Bag">
+        <h2>WOVEN WRISTLET CLUTCH BAG</h2>
+        <p class="price">$55.20</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="9.jpg" alt="Shoulder Cross Body Bag">
+        <h2>SHOULDER CROSS-BODY BAG</h2>
+        <p class="price">$50.00</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="10.jpg" alt="Girls Pink School Backpack">
+        <h2>GIRLS PINK SCHOOL BACKPACK</h2>
+        <p class="price">$10.00</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="11.jpg" alt="Mermaid Hand Bag">
+        <h2>MERMAID HAND BAG</h2>
+        <p class="price">$67.00</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="12.jpg" alt="Women's Crossbody Bag">
+        <h2>WOMEN'S CROSSBODY BAG</h2>
+        <p class="price">$80.00</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="13.jpg" alt="Premium Ladies Handbag">
+        <h2>PREMIUM LADIES HANDBAG</h2>
+        <p class="price">$20.00</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="14.jpg" alt="Luxury Bag">
+        <h2>LUXURY BAG</h2>
+        <p class="price">$6.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="15.jpg" alt="Teddy Charm Mini Handbag">
+        <h2>TEDDY CHARM MINI HANDBAG</h2>
+        <p class="price">$8.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="16.jpg" alt="Bear Tote Bag">
+        <h2>BEAR TOTE BAG</h2>
+        <p class="price">$5.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="17.jpg" alt="Rock Style Crossbody Bag">
+        <h2>ROCK STYLE CROSSBODY BAG</h2>
+        <p class="price">$20.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="18.jpg" alt="Princess Handbags">
+        <h2>PRINCESS HANDBAGS</h2>
+        <p class="price">$24.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="19.jpg" alt="Single Shoulder Bag">
+        <h2>SINGLE-SHOULDER BAG</h2>
+        <p class="price">$35.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="20.jpg" alt="Korean Style Tote Bag">
+        <h2>KOREAN STYLE TOTE BAG</h2>
+        <p class="price">$38.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="21.jpg" alt="Pearl Mini Bag">
+        <h2>PEARL MINI BAG</h2>
+        <p class="price">$45.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="22.jpg" alt="Leather Plain Shoulder Bag">
+        <h2>LEATHER PLAIN SHOULDER BAG</h2>
+        <p class="price">$12.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="23.jpg" alt="Trendy Crescent Bag">
+        <h2>TRENDY CRESCENT BAG</h2>
+        <p class="price">$15.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="24.jpg" alt="Shoulder and Crossbody Bag">
+        <h2>SHOULDER AND CROSSBODY BAG</h2>
+        <p class="price">$25.50</p>
+        <button>Add to Cart</button>
+    </div>
+
+</div>
 
 </body>
 </html>
